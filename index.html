@@ -170,6 +170,16 @@
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(44, 36, 22, 0.08);
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--terracota);
         }
 
         .team-member h3 {
@@ -183,6 +193,10 @@
             font-size: 0.9rem;
             font-weight: 400;
             margin-bottom: 1rem;
+        }
+
+        .team-member p {
+            text-align: left;
         }
 
         .cards-grid {
@@ -435,13 +449,15 @@
 
         <div class="team-grid">
             <div class="team-member">
+                <img src="assets/team/letycia.jpg" alt="Letycia Raulino" class="team-photo">
                 <h3>Letycia Raulino</h3>
                 <h4>Arquiteta e Urbanista | Engenheira de Segurança</h4>
                 <p>Sou arquiteta e urbanista, engenheira de segurança do trabalho e possuo experiência em avaliações de imóveis. Minha atuação une técnica, criatividade e propósito: acredito que cada projeto deve nascer do entendimento real das necessidades de quem vai viver, trabalhar ou receber pessoas naquele espaço.</p>
             </div>
 
             <div class="team-member">
-                <h3>Nertan Raulino</h3>
+                <img src="assets/team/nertan.jpg" alt="Nertan Campos" class="team-photo">
+                <h3>Nertan Campos</h3>
                 <h4>Arquiteto | Especialista em Mobiliário</h4>
                 <p>Sou arquiteto e construí minha trajetória unindo técnica, sensibilidade e experiência prática. Foram mais de 20 anos trabalhando no universo do mobiliário — da marcenaria ao alto padrão — o que me deu uma visão prática e aprofundada sobre ergonomia, detalhamento e escolha inteligente de materiais.</p>
             </div>
@@ -482,7 +498,7 @@
         <div class="portfolio-grid">
             <div class="projeto-card" onclick="openGallery('tj')">
                 <div class="projeto-img">
-                    <img src="assets/tj/Foto1_capa.jpg" alt="Apartamento T+J">
+                    <img src="assets/tj/Foto1_capa.png" alt="Apartamento T+J">
                 </div>
                 <div class="projeto-info">
                     <h3>Apartamento T+J</h3>
@@ -492,7 +508,7 @@
 
             <div class="projeto-card" onclick="openGallery('jv')">
                 <div class="projeto-img">
-                    <img src="assets/jv/Foto-1.jpg" alt="Escritório JV">
+                    <img src="assets/jv/Foto (1).png" alt="Escritório JV">
                 </div>
                 <div class="projeto-info">
                     <h3>Escritório JV</h3>
@@ -502,7 +518,7 @@
 
             <div class="projeto-card" onclick="openGallery('fl')">
                 <div class="projeto-img">
-                    <img src="assets/fl/Foto1.jpg" alt="Apartamento F+L">
+                    <img src="assets/fl/Foto1.png" alt="Apartamento F+L">
                 </div>
                 <div class="projeto-info">
                     <h3>Apartamento F+L</h3>
@@ -519,8 +535,8 @@
         <div class="contato-grid">
             <div class="contato-info">
                 <h3>Telefones</h3>
-                <p>Letycia: <a href="tel:+558699401-0085">(86) 99401-0085</a></p>
-                <p>Nertan: <a href="tel:+558698125-2508">(86) 98125-2508</a></p>
+                <p>Letycia: <a href="tel:+5586994010085">(86) 99401-0085</a></p>
+                <p>Nertan: <a href="tel:+5586981252508">(86) 98125-2508</a></p>
             </div>
 
             <div class="contato-info">
@@ -566,34 +582,34 @@
             tj: {
                 title: 'Apartamento T+J',
                 images: [
-                    'assets/tj/Foto1_capa.jpg',
-                    'assets/tj/Foto2.jpg',
-                    'assets/tj/Foto3.jpg',
-                    'assets/tj/Foto4.jpg',
-                    'assets/tj/Foto5.jpg',
-                    'assets/tj/Foto6.jpg'
+                    'assets/tj/Foto1_capa.png',
+                    'assets/tj/Foto2.png',
+                    'assets/tj/Foto3.png',
+                    'assets/tj/Foto4.png',
+                    'assets/tj/Foto5.png',
+                    'assets/tj/Foto6.png'
                 ]
             },
             jv: {
                 title: 'Escritório JV',
                 images: [
-                    'assets/jv/Foto-1.jpg',
-                    'assets/jv/Foto-2.jpg',
-                    'assets/jv/Foto-3.jpg',
-                    'assets/jv/Foto-4.jpg',
-                    'assets/jv/Foto-5.jpg'
+                    'assets/jv/Foto (1).png',
+                    'assets/jv/Foto (2).png',
+                    'assets/jv/Foto (3).png',
+                    'assets/jv/Foto (4).png',
+                    'assets/jv/Foto (5).png'
                 ]
             },
             fl: {
                 title: 'Apartamento F+L',
                 images: [
-                    'assets/fl/Foto0.jpg',
-                    'assets/fl/Foto1.jpg',
-                    'assets/fl/Foto2.jpg',
-                    'assets/fl/Foto3.jpg',
-                    'assets/fl/Foto4.jpg',
-                    'assets/fl/Foto5.jpg',
-                    'assets/fl/Foto6.jpg'
+                    'assets/fl/Foto0.png',
+                    'assets/fl/Foto1.png',
+                    'assets/fl/Foto2.png',
+                    'assets/fl/Foto3.png',
+                    'assets/fl/Foto4.png',
+                    'assets/fl/Foto5.png',
+                    'assets/fl/Foto6.png'
                 ]
             }
         };
