@@ -158,45 +158,49 @@
             margin-bottom: 3rem;
         }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
         .team-member {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 4rem;
             background: var(--branco);
-            padding: 2rem;
+            padding: 3rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(44, 36, 22, 0.08);
-            text-align: center;
         }
 
-        .team-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+        .team-member.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .team-photo-large {
+            width: 300px;
+            height: 300px;
             object-fit: cover;
-            margin: 0 auto 1.5rem;
-            border: 4px solid var(--terracota);
+            border-radius: 8px;
+            flex-shrink: 0;
         }
 
-        .team-member h3 {
+        .team-info {
+            flex: 1;
+        }
+
+        .team-info h3 {
             color: var(--verde);
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             margin-bottom: 0.5rem;
         }
 
-        .team-member h4 {
+        .team-info h4 {
             color: var(--terracota);
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 400;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .team-member p {
-            text-align: left;
+        .team-info p {
+            color: var(--texto);
+            line-height: 1.8;
         }
 
         .cards-grid {
@@ -414,6 +418,16 @@
             h2 {
                 font-size: 2rem;
             }
+
+            .team-member {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .team-photo-large {
+                width: 200px;
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -447,16 +461,18 @@
         <h2>Sobre a DOPPIO</h2>
         <p class="subtitle">A DOPPIO nasceu da paixão por criar espaços que contam histórias — histórias reais, vividas, cheias de identidade. Somos especialistas em arquitetura e decoração, dedicados a criar espaços inovadores e criativos que inspirem e encantem.</p>
 
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="assets/team/letycia.jpg" alt="Letycia Raulino" class="team-photo">
+        <div class="team-member">
+            <img src="assets/team/letycia.jpg" alt="Letycia Raulino" class="team-photo-large">
+            <div class="team-info">
                 <h3>Letycia Raulino</h3>
                 <h4>Arquiteta e Urbanista | Engenheira de Segurança</h4>
                 <p>Sou arquiteta e urbanista, engenheira de segurança do trabalho e possuo experiência em avaliações de imóveis. Minha atuação une técnica, criatividade e propósito: acredito que cada projeto deve nascer do entendimento real das necessidades de quem vai viver, trabalhar ou receber pessoas naquele espaço.</p>
             </div>
+        </div>
 
-            <div class="team-member">
-                <img src="assets/team/nertan.jpg" alt="Nertan Campos" class="team-photo">
+        <div class="team-member reverse">
+            <img src="assets/team/nertan.jpg" alt="Nertan Campos" class="team-photo-large">
+            <div class="team-info">
                 <h3>Nertan Campos</h3>
                 <h4>Arquiteto | Especialista em Mobiliário</h4>
                 <p>Sou arquiteto e construí minha trajetória unindo técnica, sensibilidade e experiência prática. Foram mais de 20 anos trabalhando no universo do mobiliário — da marcenaria ao alto padrão — o que me deu uma visão prática e aprofundada sobre ergonomia, detalhamento e escolha inteligente de materiais.</p>
@@ -593,7 +609,6 @@
             jv: {
                 title: 'Escritório JV',
                 images: [
-                    'assets/jv/Foto0.jpg',
                     'assets/jv/Foto1.jpg',
                     'assets/jv/Foto2.jpg',
                     'assets/jv/Foto3.jpg',
